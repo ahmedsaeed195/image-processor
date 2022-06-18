@@ -12,14 +12,7 @@
     ],
     "rules": {
         "prettier/prettier": [
-            "error",
-            {
-                "tabWidth": 4
-            }
-        ],
-        "@typescript-eslint/indent": [
-            "error",
-            4
+            "error"
         ],
         "@typescript-eslint/no-unused-vars": "error",
         "@typescript-eslint/no-explicit-any": "error"
