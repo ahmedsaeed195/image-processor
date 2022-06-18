@@ -9,7 +9,8 @@
     "prestart": "npx tsc",
     "dev": "nodemon src/main.ts",
     "lint": "eslint --fix src/**/*.ts",
-    "prettier": "prettier --config .prettierrc src/**/*.ts --write"
+    "prettier": "prettier --config .prettierrc src/**/*.ts --write",
+    "test": "npx tsc && npx jasmine"
   },
   "keywords": [],
   "author": "",
