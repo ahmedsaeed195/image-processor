@@ -14,15 +14,33 @@ describe('API', () => {
         });
     });
     describe('GET /api/image', () => {
-        it('responds with 200 and image', (done) => {
+        it('responds with 200 and no image', (done) => {
             request(app)
                 .get('/api/image')
-                .expect(200)
-                .end((error: Error) => (error ? done.fail(error) : done()));
+                .end((error: Error, res) => {
+                    if (error) {
+                        done.fail(error);
+                    }
+                    expect(res.status).toBe(200);
+                    expect(res.headers['content-type']).not.toMatch('image');
+                    done();
+                });
+        });
+        it('responds with 200 and image', (done) => {
+            request(app)
+                .get('/api/image/?fileName=fjord.jpg')
+                .end((error: Error, res) => {
+                    if (error) {
+                        done.fail(error);
+                    }
+                    expect(res.status).toBe(200);
+                    expect(res.headers['content-type']).toMatch('image');
+                    done();
+                });
         });
         it('responds with 404 and no image', (done) => {
             request(app)
-                .get('/api/image')
+                .get('/api/image?width=25')
                 .expect(404)
                 .end((error: Error) => (error ? done.fail(error) : done()));
         });
