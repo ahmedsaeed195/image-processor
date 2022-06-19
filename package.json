@@ -6,11 +6,12 @@
   "scripts": {
     "start": "node .",
     "build": "npx tsc",
-    "prestart": "npx tsc",
+    "prebuild": "rmdir /s /q build",
+    "prestart": "npm run build",
     "dev": "nodemon src/server.ts",
     "lint": "eslint --fix src/**/*.ts",
     "prettier": "prettier --config .prettierrc src/**/*.ts --write",
-    "test": "npx tsc && npx jasmine"
+    "test": "npm run build && npx jasmine"
   },
   "keywords": [],
   "author": "",
