@@ -27,10 +27,9 @@ class ImageController {
                 query.width,
                 query.height
             );
-            if (typeof target === 'object') {
+            if (!target) {
                 return res.status(404).json({
-                    message: 'Image was not found!',
-                    error: target
+                    message: 'Image was not found!'
                 });
             }
             const file = path.normalize(

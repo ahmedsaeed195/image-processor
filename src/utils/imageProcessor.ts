@@ -5,7 +5,7 @@ const imageProcessor = async (
     fileName: string,
     width: string,
     height: string
-): Promise<string | unknown> => {
+): Promise<string | null> => {
     try {
         const filePathLink = path.normalize('assets/images/');
         const fileOutPathLink = path.normalize('assets/thumbs/');
@@ -24,7 +24,7 @@ const imageProcessor = async (
         return imageTarget;
     } catch (err) {
         console.log(err);
-        return err;
+        return null;
     }
 };
 
