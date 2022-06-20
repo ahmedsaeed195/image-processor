@@ -60,7 +60,7 @@ If the same request was sent before during the server session, then it will be f
 
 **Responses**
 
-```json
+```
 // Fetched image of desired dimensions
 // status code 200
 // No body, but file is sent
@@ -124,7 +124,7 @@ As for Typescript, Eslint and Prettier, their configuration files are named `tsc
 
 Also some premade npm scripts were added to the `package.json` file under the scripts section.
 
-```json
+```
 "scripts": {
     "start": "node .", //Starts the server from the main execution file ("main": "build/server.js")
     "build": "npx tsc", //Build Typescript code into Javascript code
