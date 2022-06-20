@@ -32,9 +32,9 @@ Currently there are only 3 endpoints of which only 1 that is actually useful.
 
 ## GET
 
-1. [/](#GET_/)<br/>
-2. [/api](#GET_/api) <br/>
-3. [/api/image](#GET_/api/image)<br/>
+1. [/](#get-/)<br/>
+2. [/api](#get-/api) <br/>
+3. [/api/image](#get_/api/image)<br/>
 
 ## GET /
 
