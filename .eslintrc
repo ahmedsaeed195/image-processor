@@ -12,7 +12,10 @@
     ],
     "rules": {
         "prettier/prettier": [
-            "error"
+            "error",
+            {
+                "endOfLine": "auto"
+            }
         ],
         "@typescript-eslint/no-unused-vars": "error",
         "@typescript-eslint/no-explicit-any": "error"
