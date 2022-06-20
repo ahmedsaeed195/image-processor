@@ -11,18 +11,16 @@ const imageProcessor = async (
         const fileOutPathLink = path.normalize('assets/thumbs/');
         const image = sharp(filePathLink + fileName);
         const metaData = await image.metadata();
-        console.log('inside processor');
         const dimensions = {
             width: parseInt(width) || metaData.width,
             height: parseInt(height) || metaData.height
         };
 
         const imageTarget = `${dimensions.width}-${dimensions.height}-${fileName}`;
-        const info = await image
+        await image
             .resize({ width: dimensions.width, height: dimensions.height })
             .jpeg()
             .toFile(fileOutPathLink + imageTarget);
-        console.log(info);
         return imageTarget;
     } catch (err) {
         console.log(err);

@@ -27,7 +27,6 @@ class ImageController {
                 query.width,
                 query.height
             );
-            console.log('Type of target : ' + typeof target);
             if (typeof target === 'object') {
                 return res.status(404).json({
                     message: 'Image was not found!',
@@ -37,8 +36,6 @@ class ImageController {
             const file = path.normalize(
                 `${__dirname}/../../assets/thumbs/${target}`
             );
-            console.log('before response');
-            console.log(cache.has(req.originalUrl));
             cache.set(req.originalUrl, file, 500);
             return res.status(200).sendFile(file);
         } catch (err) {
