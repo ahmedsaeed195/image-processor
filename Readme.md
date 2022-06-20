@@ -32,19 +32,19 @@ Currently there are only 3 endpoints of which only 1 that is actually useful.
 
 ## GET
 
-1. [/](#get-/)<br/>
-2. [/api](#get-/api) <br/>
-3. [/api/image](#get_/api/image)<br/>
+1. [/](#get-)<br/>
+2. [/api](#get-api) <br/>
+3. [/api/image](#get-api-image)<br/>
 
-## GET /
+### GET /
 
 Simply responds with a message to let you know that the server is running
 
-## GET /api
+### GET /api
 
 Simply responds with a message to let you know that the API is working
 
-## GET /api/image
+### GET /api/image
 
 The main endpoint of the application, this endpoint takes in optional query parameters that specify the image name of which you want to fetch, as well as the desired width and height (these two are optional, if missing 1 or both, will use the default image deminisons).
 
