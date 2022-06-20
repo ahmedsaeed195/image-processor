@@ -9,11 +9,11 @@ class ImageController {
             if (!Object.keys(req.query).length) {
                 return res.status(200).json({
                     message:
-                        'This is the image api, please add a query with the file name and possibly the desired width and height'
+                        'This is the image api, please add a query with the file name and the desired width and height if any'
                 });
             }
             if (!req.query.fileName) {
-                return res.status(404).json({
+                return res.status(400).json({
                     message: 'No file name was set'
                 });
             }
