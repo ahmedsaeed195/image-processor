@@ -34,7 +34,7 @@ Currently there are only 3 endpoints of which only 1 that is actually useful.
 
 1. [/](#get-)<br/>
 2. [/api](#get-api) <br/>
-3. [/api/image](#get-api-image)<br/>
+3. [/api/image](#get-apiimage)<br/>
 
 ### GET /
 
