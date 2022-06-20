@@ -38,10 +38,10 @@ describe('API', () => {
                     done();
                 });
         });
-        it('responds with 404 and no image', (done) => {
+        it('responds with 400 and no image', (done) => {
             request(app)
                 .get('/api/image?width=25')
-                .expect(404)
+                .expect(400)
                 .end((error: Error) => (error ? done.fail(error) : done()));
         });
     });
