@@ -16,9 +16,12 @@ app.use(express.json());
 
 app.use('/api', routes);
 
-app.get('/', (req, res) => {
-    res.send('Server is Running');
-});
+app.get(
+    '/',
+    (req: express.Request, res: express.Response): express.Response => {
+        return res.send('Server is Running');
+    }
+);
 
 const server = app.listen(PORT, (): void =>
     console.log(`Listening on port ${PORT}`)
