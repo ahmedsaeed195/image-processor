@@ -1,7 +1,7 @@
 import express from 'express';
 import cache from '../../config/node_cache';
 //this method only works with GET requests
-export const checkCache = (
+const verifyCache = (
     req: express.Request,
     res: express.Response,
     next: express.NextFunction
@@ -13,3 +13,5 @@ export const checkCache = (
     }
     return next();
 };
+
+export default verifyCache;
